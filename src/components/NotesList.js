@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import AddNote from './AddNote';
 
 const NotesList = ({ notes = [], handleAddNote, handleDeleteNote }) => {
-  //console.log(notes);
   return (
     <div className="notes-list">
       {notes.map((note) => (
@@ -25,7 +24,8 @@ NotesList.propTypes = {
     PropTypes.shape({
       id: PropTypes.string,
       date: PropTypes.string,
-      text: PropTypes.string
+      text: PropTypes.string,
+      index: PropTypes.string
     })
   ),
   handleAddNote: PropTypes.func,
